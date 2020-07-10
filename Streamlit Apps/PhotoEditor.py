@@ -1,25 +1,18 @@
 import streamlit as st
 import os
 from matplotlib import pyplot as plt
-from PIL import Image
 
 
 # st.help(st.bar_chart)
 st.markdown('### Photo Editor App')
 
-'''
 files = list()
 for file in os.listdir():
     if file.split('.')[1] in ('jpeg', 'png', 'jpg', 'gif'):
         files.append(file)
 
 file = st.selectbox('Please choose an image file:',options=files)
-'''
-st.help(st.file_uploader)
-
-file = st.file_uploader('Please select an image file to edit', type=['jpeg', 'png', 'jpg', 'gif'])
-if file:
-    img = plt.imread(Image.open(file))
+img = plt.imread(file)
 
 blur = st.slider('How blur do you want the image to be?', 1,50,1)
 crop_w = st.slider('Crop the image?\nChoose width:', 0, img.shape[1],( 0, img.shape[1]))
