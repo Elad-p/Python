@@ -2,8 +2,6 @@ import streamlit as st
 import os
 from matplotlib import pyplot as plt
 
-
-# st.help(st.bar_chart)
 st.markdown('### Photo Editor App')
 
 files = list()
