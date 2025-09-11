@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-tips = pd.read_csv('data/tips.csv')
+tips = pd.read_csv('https://github.com/Elad-p/Python/blob/0341522fb1cc41a968144a498213fb912d57db29/streamlit_apps/layout/data/tips.csv')
 
 kpi1, kpi2, kpi3 = st.columns(3)
 
@@ -99,5 +99,6 @@ with t2:
                    title="Filtered: Total Bill vs Tip"),
         use_container_width=True
     )
+
 
 
