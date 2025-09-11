@@ -29,12 +29,12 @@ if st.button('Reset Table'):
     st.session_state.contacts_count = 100
     st.rerun()
 
-if st.button('Export Contacts'):
-    st.download_button(label = 'Export Contacts', 
-                       data = st.session_state.people.to_csv().encode("utf-8"),
-                       file_name = 'Contacts_List.csv')
+st.download_button(label = 'Export Contacts', 
+                   data = st.session_state.people.to_csv().encode("utf-8"),
+                   file_name = 'Contacts_List.csv')
 
-    st.success('Contacts Exported Successfully')
+st.success('Contacts Exported Successfully')
+
 
 
 
