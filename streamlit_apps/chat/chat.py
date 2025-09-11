@@ -4,8 +4,8 @@ import time
 from faker import Faker
 
 st.set_page_config(
-    page_title="Ex-stream-ly Cool App",
-    page_icon="🧊",
+    page_title="faker chat",
+    page_icon=":robot:",
     layout="centered",
     initial_sidebar_state="expanded",
     menu_items={
@@ -50,4 +50,5 @@ if prompt := st.chat_input("What is up?"):
     with st.chat_message("assistant"):
         response = st.write_stream(response_generator())
     # Add assistant response to chat history
+
     st.session_state.messages.append({"role": "assistant", "content": response})
