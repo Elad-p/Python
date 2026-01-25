@@ -6,18 +6,18 @@ import plotly.express as px
 # Basic Settings
 st.set_page_config(layout='wide', 
                    page_title="Demo Dashboard", 
-                   page_icon=":data:")
+                   page_icon=":chart:")
 
 # Intro Section
 st.title('Koola Like Demo Dashboard')
 st.header('Intro to Streamlit')
 
-st.image('dashboard.jpeg')
+st.image('./dashboard.jpeg')
 
 # Load Data
 @st.cache_data(ttl=120)
 def load_data():
-    df = pd.DataFrame(pd.read_csv('report.csv'))
+    df = pd.DataFrame(pd.read_csv('./report.csv'))
     return df
 
 data = load_data()
@@ -128,4 +128,5 @@ with right_column:
 
 if st.button('Click to approve'):
     st.balloons()
+
     st.success("We are ready to Launch! 🚀")
