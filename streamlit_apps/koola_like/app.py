@@ -10,18 +10,18 @@ st.write("Files in current directory:", os.listdir("."))
 st.set_page_config(layout='wide', 
                    page_title="Demo Dashboard", 
                    page_icon=":chart:")
-path = os.getcwd()
+path = 'streamlit_apps/koola_like/'
 
 # Intro Section
 st.title('Koola Like Demo Dashboard')
 st.header('Intro to Streamlit')
 
-st.image(path + '/dashboard.jpeg')
+st.image(path + 'dashboard.jpeg')
 
 # Load Data
 @st.cache_data(ttl=120)
 def load_data():
-    df = pd.DataFrame(pd.read_csv(path + '/report.csv'))
+    df = pd.DataFrame(pd.read_csv(path + 'report.csv'))
     return df
 
 data = load_data()
@@ -134,5 +134,6 @@ if st.button('Click to approve'):
     st.balloons()
 
     st.success("We are ready to Launch! 🚀")
+
 
 
