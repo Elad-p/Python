@@ -6,7 +6,7 @@ st.set_page_config(
 )
 
 col_a, col_b = st.columns(2)
-col_b.image('dashboard.jpeg')
+col_b.image('streamlit_apps/TCBID/dashboard.jpeg')
 
 col_a.write('This is some explanation text')
 
@@ -111,3 +111,4 @@ st.write(price_range)
 
 
 st.multiselect('Pick one or more', ['One', 'Two', 'Three'])
+
