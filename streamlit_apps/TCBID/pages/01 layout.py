@@ -12,10 +12,10 @@ col_a.write('This is some explanation text')
 
 col1, col2, col3 = st.columns(3)
 
-col2.image('dashboard.jpeg')
+col2.image('streamlit_apps/TCBID/dashboard.jpeg')
 
 col_a, col_b = st.columns([1,2])
-col_b.image('dashboard.jpeg')
+col_b.image('streamlit_apps/TCBID/dashboard.jpeg')
 
 col_a.write('This is some explanation text')
 
@@ -62,7 +62,7 @@ t1, t2, t3 = st.tabs(['Chart', 'Data', 'tab3'])
 
 
 with t1:
-    file_data = pd.read_csv('report.csv')
+    file_data = pd.read_csv('streamlit_apps/TCBID/report.csv')
 
     file_data.set_index('record_id', inplace = True)
 
@@ -108,5 +108,6 @@ price_range = st.slider('Please pick a range',
 st.write(price_range)
 
 # df.loc[df.price.between(price_range[0], price_range[1])]
+
 
 st.multiselect('Pick one or more', ['One', 'Two', 'Three'])
