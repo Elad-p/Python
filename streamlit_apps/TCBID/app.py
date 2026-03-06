@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-file_data = pd.read_csv('report.csv')
+file_data = pd.read_csv('streamlit_apps/TCBID/report.csv')
 
 file_data.set_index('record_id', inplace = True)
 
@@ -46,5 +46,6 @@ fig2 = px.choropleth(px_data,
                      labels='country', 
                      animation_frame='year',
              color_continuous_scale='rainbow')
+
 
 st.plotly_chart(fig2)
