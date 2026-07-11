@@ -18,11 +18,13 @@ def load_css(file_name):
     except FileNotFoundError:
         st.error(f"קובץ ה-CSS בשם {file_name} לא נמצא.")
 
-load_css("style_v2.css")
+path = 'streamlit_apps/financial_dashboard/'
+
+load_css(path + "style_v2.css")
 
 @st.cache_data
 def load_financial_data():
-    df = pd.read_excel('Financial_Report.xlsx')
+    df = pd.read_excel(path + 'Financial_Report.xlsx')
     df.columns = df.columns.str.strip() # ניקוי רווחים משמות העמודות
     return df
 
