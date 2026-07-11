@@ -1,6 +1,0 @@
-streamlit
-pandas
-plotly.express
-plotly.graph_objects
-xlrd
-openpyxl
