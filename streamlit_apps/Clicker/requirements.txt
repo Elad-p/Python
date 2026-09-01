@@ -1,5 +1,1 @@
 streamlit
-pandas
-plotly.express
-xlrd
-openpyxl
