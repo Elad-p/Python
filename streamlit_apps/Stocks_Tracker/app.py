@@ -3,7 +3,7 @@ import pandas as pd
 
 @st.cache_data()
 def load_data():
-    df = pd.read_excel('data/Large_File.xlsx')
+    df = pd.read_excel('streamlit_apps/Stocks_Tracker/data/Large_File.xlsx')
     return df
 
 df = load_data()
